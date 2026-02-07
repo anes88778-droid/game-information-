@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Tree | Save the Planet</title>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <style>
+        :root {
+            --nature-green: #2ecc71;
+            --deep-forest: #1b3022;
+            --earth-brown: #5d4037;
+            --danger-red: #e74c3c;
+            --soft-gold: #f1c40f;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--deep-forest);
+            color: #fff;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* --- Header Section --- */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(27, 48, 34, 0.8), rgba(27, 48, 34, 0.9)), 
+                        url('https://images.unsplash.com');
+            background-size: cover;
+            text-align: center;
+            padding: 20px;
+        }
+
+
+        .main-logo { width: 250px; animation: float 4s infinite ease-in-out; filter: drop-shadow(0 0 20px var(--nature-green)); }
+        
+        h1 { font-family: 'Cinzel', serif; font-size: 4rem; color: var(--nature-green); margin: 20px 0; letter-spacing: 5px; }
+
+        /* --- World Map Section --- */
+        .map-section { background: #fff; color: #000; padding: 80px 20px; text-align: center; }
+        .map-wrapper { max-width: 1000px; margin: 0 auto; border: 15px solid var(--earth-brown); border-radius: 10px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); position: relative; }
+        .map-wrapper img { width: 100%; display: block; }
+        
+        .map-info { margin-top: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .info-tag { background: var(--deep-forest); color: #fff; padding: 15px; border-radius: 5px; font-size: 0.8rem; }
+
+        /* --- Monster Bestiary Section --- */
+        .monster-section { padding: 100px 20px; text-align: center; }
+        .monster-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; max-width: 1200px; margin: 50px auto 0; }
+
+        .monster-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid #333;
+            padding: 30px;
+            border-radius: 20px;
+            transition: 0.4s;
+        }
+
+        .x{
+            width: 300px;
+            height: 400px;
+        }
+        .monster-card:hover { transform: translateY(-15px); border-color: var(--nature-green); background: rgba(46, 204, 113, 0.1); }
+        .monster-card h3 { font-family: 'Cinzel', serif; margin-bottom: 10px; font-size: 1.4rem; }
+        .monster-stats { font-weight: 800; color: var(--soft-gold); font-size: 0.8rem; margin-bottom: 15px; display: block; }
+
+        /* --- Store / CTA Section --- */
+        .store-section { padding: 100px 20px; text-align: center; background: var(--nature-green); color: var(--deep-forest); }
+        .buy-btn { background: var(--deep-forest); color: #fff; padding: 20px 60px; font-family: 'Cinzel', serif; border: none; border-radius: 50px; font-size: 1.5rem; cursor: pointer; transition: 0.3s; margin-top: 30px; }
+        .buy-btn:hover { background: #fff; color: var(--deep-forest); transform: scale(1.1); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Brand -->
+    <header>
+        <img src="https://media.discordapp.net/attachments/1436655346059051154/1469623077905104961/Votre_texte_de_paragraphe_1.png?ex=698854a6&is=69870326&hm=e6d82a570d6c6ddd6a2afe6609e42b2b56074d3c1e3d88001304b07477959f6e&=&format=webp&quality=lossless&width=397&height=562" class="main-logo" alt="Garden Tree Logo">
+        <h1>GARDEN TREE</h1>
+        <p style="font-weight: 300; letter-spacing: 3px;">THE LAST STAND AGAINST ENVIRONMENTAL DESTRUCTION</p>
+    </header>
+
+    <!-- The Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 style="font-family: 'Cinzel', serif; font-size: 2.5rem; margin-bottom: 20px;">THE BATTLEGROUND</h2>
+            <div class="map-wrapper">
+                <img src="https://cdn.discordapp.com/attachments/1436655346059051154/1469386731341086761/Gemini_Generated_Image_5ezmix5ezmix5ezm.png?ex=69882148&is=6986cfc8&hm=4e87d38afa7396c69058ef4368476d356dffb344675c02f9b8ee055fd257e813&" alt="Battle Map">
+            </div>
+            <div class="map-info">
+                <div class="info-tag">🛡️ <b>CENTER:</b> Defend the Tree at all costs.</div>
+                <div class="info-tag">🎲 <b>TILES:</b> Luck-based movements determine your fate.</div>
+                <div class="info-tag">⚠️ <b>HAZARDS:</b> Watch out for toxic skulls and mystery events.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Monsters Bestiary -->
+    <section class="monster-section">
+        <h2 style="font-family: 'Cinzel', serif; font-size: 2.5rem;">THE POLLUTANT GOLEMS</h2>
+        <div class="monster-grid">
+            <!-- Earth -->
+            <div class="monster-card">
+                <h3 style="color: #8d6e63;">EARTH GOLEM</h3>
+                <span class="monster-stats">HP: 150 | ATK: 40 | MP: 60</span>
+                <p style="font-size: 0.9rem; opacity: 0.7;">Hardened waste and roots. Slow but extremely durable.A beast that excretes waste in the forestsA beast that excretes waste in the forests</p>
+                <img src="https://cdn.discordapp.com/attachments/1436655346059051154/1469621784679546922/Gemini_Generated_Image_q65qycq65qycq65q.png?ex=69885371&is=698701f1&hm=72cfec6ade8766fecbb9e33cfad2a8f79b67bd0b86584d9051df1e9ed23a39cd&" alt="">
+            </div>
+            <!-- Dust -->
+            <div class="monster-card">
+                <h3 style="color: var(--soft-gold);">DUST GOLEM</h3>
+                <span class="monster-stats">HP: 100 | ATK: 25 | MP: 30</span>
+                <p style="font-size: 0.9rem; opacity: 0.7;">An elusive phantom of sand, striking with quick desertification.A monster representing desertification</p>
+            </div>
+            <!-- Blaze -->
+            <div class="monster-card">
+                <h3 style="color: var(--danger-red);">BLAZE GOLEM</h3>
+                <span class="monster-stats">HP: 80 | ATK: 30 | MP: 40</span>
+                <p style="font-size: 0.9rem; opacity: 0.7;">A living conflagration. Burns the environment with toxic fire.A beast represents forest fires</p>
+            </div>
+            <!-- Frost -->
+            <div class="monster-card">
+                <h3 style="color: #3498db;">FROST GOLEM</h3>
+                <span class="monster-stats">HP: 80 | ATK: 30 | MP: 40</span>
+                <p style="font-size: 0.9rem; opacity: 0.7;">Crystalline ice waste. Slows enemies with chilling pollution.A monster representing blizzards</p>
+            </div>
+                    <div class="gallant guardain">
+                <h3 style="color: #8d6e63;">GALLANT GUARDAIN</h3>
+                <span class="gallant guardain-stats">HP: 120 | ATK: 35 | MP: 50</span>
+                <p style="font-size: 0.9rem; opacity: 0.7;">The tree guardian</p>
+                <img class="x" src="https://cdn.discordapp.com/attachments/1436655346059051154/1469642151137644604/knight.jpg?ex=69886669&is=698714e9&hm=5892ca29df8ffe8b65648e423e2aa59f4e9033474169da7c3ee3c2577eca9ebe&" alt="">
+            </div>
+                                <div class="Question cards">
+                <h3 style="color: #8d6e63;">Question cards</h3>
+                <span class="Question cards-stats">Question cards, every step you get a question</span>
+                <p style="font-size: 0.9rem; opacity: 0.7;">The tree guardian</p>
+                <img class="x" src="https://media.discordapp.net/attachments/1436655346059051154/1469623078500962487/Design_sans_titre_1.png?ex=698854a6&is=69870326&hm=ee42dda7bf4a4044d419067d898eee36b744cac13802bec1e40f8fecb14f04d4&=&format=webp&quality=lossless&width=397&height=562" alt="">
+            </div>
+        </div>
+            <!-- اللفافة مع القوانين بالإنجليزية -->
+    <div class="scroll-wrapper">
+        <div class="scroll-text">
+            <h2>GAME RULES</h2>
+            <ul>
+                <li><strong>Guardian Dice:</strong> Use the dice to attack. A roll of <b>6</b> instantly resets a monster to the start!</li>
+                <li><strong>Tree Defense:</strong> If a monster reaches the Sacred Tree, the Guardian loses the battle.</li>
+                <li><strong>10-Minute Trial:</strong> Survive the waves for 10 minutes to win and restore nature.</li>
+                <li><strong>Collision Fate:</strong> If two monsters meet on the same tile, they both return to the beginning.</li>
+                <li><strong>Eco-Truths:</strong> Each retreat draws a card revealing real-world environmental pollution events.</li>
+                <li><strong>The goal of the game:</strong> Each retreat draws a card revealing real-world environmental pollution events.</li>.</li>
+                <li><strong>qistion:</strong> Question cards, every step you get a question
+                <li><strong>information:</strong>        My idea is a dice game where in the centre a knight defends a tree and there are 4 monsters: one made of trash, another of sand, a normal one, and another ordinary monster. There are also cards. Every time a monster advances, it lands on a space according to luck. If the monsters meet on the same space, they return to the start. When the knight rolls the dice and, for example, gets a 3, and spins a pen that lands on one of the monsters, the player controlling that monster moves back 3 spaces depending on the knight's luck. This way, the knight can defend the tree. The cards work such that every time a monster moves backward, the knight's owner takes a card that describes an event that could happen in real life causing severe environmental pollution.        <li><strong>qistion:</strong> Question cards, every step you get a question
+            </ul>
+            </ul>
+        </div>
+    </div>
+    </section>
+
+    <!-- Final Store Section -->
+    <section class="store-section">
+        <h2 style="font-family: 'Cinzel', serif; font-size: 2.5rem;">HEAL THE WORLD</h2>
+        <p style="max-width: 700px; margin: 20px auto; font-weight: 600;">Every copy sold contributes to real-world reforestation efforts. Become the Guardian today.</p>
+        <div style="font-size: 3rem; font-weight: 800;">$11,50</div>
+        <button class="buy-btn">PURCHASE NOW 🛒</button>
+        <div style="margin-top: 40px; font-weight: bold; opacity: 0.8;">SNAI3I Studios | Global Game Jam 2026</div>
+    </section>
+
+    <footer style="padding: 30px; text-align: center; opacity: 0.5; font-size: 0.8rem;">
+        &copy; 2026 Garden Tree - Save the Tree, Save the Future. buy team anes+odaifa+BLOLO+BASET
+    </footer>
+
+</body>
+</html>
